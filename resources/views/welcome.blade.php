@@ -55,7 +55,6 @@
 
     </head>
     <body data-spy="scroll" data-target="#template-navbar">
-            <h1>hello from welcome <h1>
         <!--== 4. Navigation ==-->
         <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top">
             <div class="container">

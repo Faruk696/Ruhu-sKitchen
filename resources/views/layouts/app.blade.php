@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-p
+
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -17,7 +17,7 @@ p
     <link href="{{ asset('backend/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('backend/demo/demo.css') }}" rel="stylesheet" />
-    @stack('css')  
+    @stack('css')
 
 </head>
 
@@ -25,12 +25,22 @@ p
     <div id="app">
         <div class="wrapper ">
             <!--side bar-->
+            @if(Request::is('admin*'))
             @include('layouts.partial.sidebar')
+            @endif
+
+
             <div class="main-panel">
                 <!-- Navbar -->
-                @include('layouts.partial.topbar')
+                @if(Request::is('admin*'))
+                    @include('layouts.partial.topbar')
+                @endif
+
                 @yield('content')
-                @include('layouts.partial.footer')
+
+                @if(Request::is('admin*'))
+                    @include('layouts.partial.footer')
+                @endif
             </div>
         </div>
         <div class="fixed-plugin">
