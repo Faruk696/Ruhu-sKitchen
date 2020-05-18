@@ -17,7 +17,7 @@
     <link href="{{ asset('backend/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('backend/demo/demo.css') }}" rel="stylesheet" />
-    @stack('css')
+    @stack('css') 
 
 </head>
 
@@ -66,22 +66,22 @@
                     <li class="header-title">Images</li>
                     <li class="active">
                         <a class="img-holder switch-trigger" href="javascript:void(0)">
-                            <img src="../assets/img/sidebar-1.jpg" alt="">
+                            <img src="{{ asset('backend/img/sidebar-1.jpg') }}" alt="">
                         </a>
                     </li>
                     <li>
                         <a class="img-holder switch-trigger" href="javascript:void(0)">
-                            <img src="../assets/img/sidebar-2.jpg" alt="">
+                            <img src="{{ asset('backend/img/sidebar-2.jpg') }}" alt="">
                         </a>
                     </li>
                     <li>
                         <a class="img-holder switch-trigger" href="javascript:void(0)">
-                            <img src="../assets/img/sidebar-3.jpg" alt="">
+                            <img src="{{ asset('backend/img/sidebar-3.jpg') }}" alt="">
                         </a>
                     </li>
                     <li>
                         <a class="img-holder switch-trigger" href="javascript:void(0)">
-                            <img src="../assets/img/sidebar-4.jpg" alt="">
+                            <img src="{{ asset('backend/img/sidebar-4.jpg') }}" alt="">
                         </a>
                     </li>
                     <li class="button-container">
